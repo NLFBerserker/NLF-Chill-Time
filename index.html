@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLF: A Relaxing Night at NLF HQ Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>NLF: A Relaxing Night at NLF HQ Bar</h1>
+    <div id="game-container">
+        <div id="characters">
+            <h2>Characters</h2>
+            <ul>
+                <li>Shadow: <span id="shadow-bar">Relaxation 50%</span>
+                    <div class="relaxation-bar" id="shadow-relax-bar"></div>
+                </li>
+                <li>Berserker: <span id="berserker-bar">Relaxation 50%</span>
+                    <div class="relaxation-bar" id="berserker-relax-bar"></div>
+                </li>
+                <li>Angel: <span id="angel-bar">Relaxation 50%</span>
+                    <div class="relaxation-bar" id="angel-relax-bar"></div>
+                </li>
+                <li>Beloved Tarim: <span id="tarim-bar">Relaxation 50%</span>
+                    <div class="relaxation-bar" id="tarim-relax-bar"></div>
+                </li>
+                <li>Chaffinch: <span id="chaffinch-bar">Relaxation 50%</span>
+                    <div class="relaxation-bar" id="chaffinch-relax-bar"></div>
+                </li>
+            </ul>
+            <h3>Group Relaxation: <span id="group-relaxation">50%</span></h3>
+            <div class="relaxation-bar" id="group-relax-bar"></div>
+
+            <!-- Rage Meter -->
+            <h3>Rage Meter: <span id="rage-meter">0%</span></h3>
+            <div class="relaxation-bar" id="rage-relax-bar"></div>
+        </div>
+
+        <div id="dialogue-box">
+            <p id="dialogue">You are sitting at the table with the NLF battalion. What would you like to do?</p>
+        </div>
+
+        <div id="choices">
+            <button onclick="talkTo('Shadow')">Talk to Shadow</button>
+            <button onclick="talkTo('Berserker')">Talk to Berserker</button>
+            <button onclick="talkTo('Angel')">Talk to Angel</button>
+            <button onclick="talkTo('Tarim')">Talk to Beloved Tarim</button>
+            <button onclick="talkTo('Chaffinch')">Talk to Chaffinch</button>
+        </div>
+
+        <div id="end-game"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

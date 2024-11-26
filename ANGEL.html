@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool One Liners</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        #quote {
+            max-width: 80%;
+        }
+        #author {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="quote">Click to see the first one-liner!</div>
+        <div id="author"></div>
+    </div>
+    <script>
+        const quotes = [
+            { text: "That's the last time that guy will try to attack me, because now he's dead *smokes cigarette*", author: "Shadow" },
+            { text: "Looks like they'll be late for work tomorrow.", author: "Berserker" },
+            { text: "He asked for a miracle. I gave him one... a one-way ticket to the afterlife.", author: "Angel" },
+            { text: "Consider that your final performance.", author: "Soldier Chaffinch" },
+            { text: "You can't beat me in the dark... because I *am* the dark.", author: "Shadow" },
+            { text: "That explosion was on the house.", author: "Beloved Tarim" },
+            { text: "I hope he enjoyed his last meal... because it's the only one he'll remember.", author: "Soldier Chaffinch" },
+            { text: "Time to take out the trash.", author: "Berserker" },
+            { text: "Game over. I win.", author: "Angel" },
+            { text: "You wanted the spotlight. Now you're in it—for eternity.", author: "Beloved Tarim" }
+        ];
+
+        let currentQuote = -1;
+
+        document.body.addEventListener("click", () => {
+            currentQuote = (currentQuote + 1) % quotes.length;
+            document.getElementById("quote").textContent = quotes[currentQuote].text;
+            document.getElementById("author").textContent = `- ${quotes[currentQuote].author}`;
+        });
+    </script>
+</body>
+</html>
